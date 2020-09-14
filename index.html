@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Calculator</title>
+  <style>
+    .container {
+      padding: 2rem 0;
+    }
+
+    #input_value1,
+    #input_value2,
+    #calc-btn,
+    #results,
+    #error {
+      display: none;
+    }
+
+    form {
+      margin-top: 1rem;
+    }
+
+    #text_results h3 {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container ui">
+    <div class="ui raised segment">
+      <h1 class="ui huge header orange ribbon label">Calculator</h1>
+      <!-- Main calculator form -->
+      <form id="calcForm" class="ui form">
+        <h4 class="ui dividing header">Select Your Values</h4>
+        <div class="fields">
+          <div class="eight wide field">
+            <div class="field">
+              <label>Operation</label>
+              <select id="select_op" class="ui fluid dropdown">
+                <option value="">Select Operation</option>
+                <option value="+">Addition</option>
+                <option value="-">Subtraction</option>
+                <option value="*">Multiplication</option>
+                <option value="/">Division</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="input_value1" class="four wide field">
+            <label>Select Value 1</label>
+            <div class="field">
+              <input type="text" id="value1">
+            </div>
+          </div>
+
+          <div id="input_value2" class="four wide field">
+            <label>Select Value 2</label>
+            <div class="field">
+              <input type="text" id="value2">
+            </div>
+          </div>
+        </div>
+
+        <button id="calc-btn" class="huge fluid ui button" type="submit">Calculate</button>
+        <!-- <button id="after" class="huge fluid ui button">Calculating</button> -->
+      </form>
+
+      <!-- Error Message Div -->
+      <div id="error" class="ui error message">
+        <div class="header">Please fill every option.</div>
+      </div>
+
+      <!-- Dislpay Results -->
+      <div id="results" class="ui big floated message">
+        <h2 class="ui huge dividing header">Results</h2>
+        <div id="text_results">
+          <h3 id="text">54</h3>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="ui ">
+      <a href="https://semantic-ui.com/" target="_blank" class="ui orange tag label">Designed using Semantic UI</a>
+    </div>
+  </div>
+
+  <!-- Jquery -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Semantic JS -->
+  <script src="js/semantic.min.js"></script>
+  <script>
+    // Select Dropdown
+    $('select.dropdown')
+      .dropdown()
+      ;
+  </script>
+
+  <!-- Main Calculator Script -->
+  <script src="js/calculator.js"></script>
+</body>
+
+</html>

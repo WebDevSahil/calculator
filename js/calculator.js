@@ -50,7 +50,7 @@ function on_change() {
 
         // Attach the result value to h3
         document.getElementById('text').innerText = result;
-        window.alert(result);
+        // window.alert(result);
       }, 3000);
     }
     e.preventDefault();
